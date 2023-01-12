@@ -1,5 +1,5 @@
-*{
-    margin:0px;
+* {
+    margin: 0px;
     padding: 0px;
 }
 
@@ -9,20 +9,27 @@ body {
 
 }
 
-a, a:focus, a:hover {
+a,
+a:focus,
+a:hover {
     text-decoration: none;
     outline: 0;
+    font-weight: lighter;
 }
+
 /* -----------------------------------*/
 /* ---------->>> HEADER <<<-----------*/
 /* -----------------------------------*/
-
+.home {
+    padding-top:100px;
+}
 .header-fixed {
-    position: fixed;
+    position: fixed !important;
     left: 0;
     top: 0;
     box-shadow: -21.213px 21.213px 30px 0px rgb(158 158 158 / 30%);
 }
+
 .header-area {
     padding: 10px 0;
     position: relative;
@@ -33,6 +40,7 @@ a, a:focus, a:hover {
     -moz-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
+
 }
 
 /**/
@@ -42,7 +50,8 @@ a, a:focus, a:hover {
 
 .d-flex {
     display: -ms-flexbox !important;
-    display: flex !important
+    display: flex !important;
+    flex-wrap: wrap;
 }
 
 
@@ -81,6 +90,7 @@ a, a:focus, a:hover {
     -ms-flex-align: center;
     align-items: center
 }
+
 .navbar-nav {
     display: -ms-flexbox;
     display: flex;
@@ -111,6 +121,48 @@ a, a:focus, a:hover {
 
 }
 
-.logo{
-    width: 120px;
+.logo {
+    width: 80px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.restaurant-card {
+    width: calc((100%/4) - 20px);
+
+    .h3 {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .h4 {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .h5 {
+        color:$span;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+.item-link {
+    padding: 10px;
+    display: block;
+    border:1px solid transparent;
+    &:hover{
+        border-color:$border-color;
+    }
+}
+.tag-span{
+    display: inline-block;
+    background: $Tags;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    color:$color-white;
+    font-weight: 400;
 }

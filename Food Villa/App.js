@@ -1948,23 +1948,34 @@ const Header = () => {
 //BodyFunctionalComponent
 const Body = () => {
   return (
-    <React.Fragment>
-      <h1>THis is a Body Heading !!!</h1>
-      <RestaurantCard />
-    </React.Fragment>
+    <div className='container'>
+      <div className='d-flex justify-content-between card-wrapper'>
+        {restaurantList.map((restaurant) => {
+          return <RestaurantCard {...restaurant.data} key={restaurant.data.id}/>
+        })}
+
+      </div>
+    </div>
   )
 }
 
 //RestaurantCard
 
-const RestaurantCard = () => {
+const RestaurantCard = ({ name, cuisines, cloudinaryImageId, area, avgRating }) => {
   return (
     <div className='restaurant-card'>
-      <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep" />
-      <h3>{restaurantList[0].data.name}</h3>
-      <h4>{restaurantList[0].data.area}</h4>
-      <h5>{restaurantList[0].data.cuisines.join(", ")}</h5>
+      <a href='/' className='item-link'>
+        <div>
+          <img className='width-100' src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + cloudinaryImageId} />
+          <h3 className='h3'>{name}</h3>
+          <h4 className='h4'>{area}</h4>
+          <h5 className='h5'>{cuisines.join(", ")}</h5>
+          <p className='tag-span'>{avgRating}</p>
+        </div>
+      </a>
+
     </div>
+
   )
 }
 
