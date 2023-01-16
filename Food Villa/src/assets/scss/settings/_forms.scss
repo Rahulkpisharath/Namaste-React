@@ -1,0 +1,52 @@
+input[type=button],
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=submit],
+input[type=text],
+textarea {
+    -webkit-appearance: none;
+    outline: 0;
+    color:$span;
+}
+
+.search_input {
+    width: calc(100% - 32px);
+    max-width: 100%;
+    resize: none;
+    border: 1px solid #d1d1d1;
+    padding: 8px 15px;
+    font-size: 18px;
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    outline: none;
+    border: 2px solid transparent;
+    letter-spacing: .5px;
+    line-height: inherit;
+    text-transform: uppercase;
+    width: auto;
+    font-weight: 600;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    background-color: $Tags;
+    color: $color-white;
+    border-radius: 2px;
+    padding: 8px 12px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.search_wrapper {
+    &.pos-relative {
+        position: relative;
+    }
+}
+
+.btn-submit {
+    position: absolute;
+    top: 0;
+    right: 0px;
+}

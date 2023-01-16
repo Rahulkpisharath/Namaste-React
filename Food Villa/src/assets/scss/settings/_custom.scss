@@ -1,3 +1,5 @@
+@import "https://www.foodchow.com/css/home/font-awesome.min.css";
+
 * {
     margin: 0px;
     padding: 0px;
@@ -21,13 +23,14 @@ a:hover {
 /* ---------->>> HEADER <<<-----------*/
 /* -----------------------------------*/
 .home {
-    padding-top:100px;
+    padding-top: 100px;
 }
+
 .header-fixed {
     position: fixed !important;
     left: 0;
     top: 0;
-    box-shadow: -21.213px 21.213px 30px 0px rgb(158 158 158 / 30%);
+    box-shadow: 0 15px 40px -20px rgb(40 44 63 / 15%);
 }
 
 .header-area {
@@ -36,9 +39,6 @@ a:hover {
     background-color: #fff;
     width: 100%;
     z-index: 999999;
-    -webkit-transition: all 0.4s ease 0s;
-    -moz-transition: all 0.4s ease 0s;
-    -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 
 }
@@ -143,7 +143,7 @@ a:hover {
     }
 
     .h5 {
-        color:$span;
+        color: $span;
         font-size: 12px;
         font-weight: 400;
     }
@@ -152,17 +152,53 @@ a:hover {
 .item-link {
     padding: 10px;
     display: block;
-    border:1px solid transparent;
-    &:hover{
-        border-color:$border-color;
+    border: 1px solid transparent;
+
+    &:hover {
+        border-color: $border-color;
     }
 }
-.tag-span{
+
+.tag-span {
     display: inline-block;
     background: $Tags;
     padding: 1px 6px;
     border-radius: 3px;
     font-size: 10px;
-    color:$color-white;
+    color: $color-white;
     font-weight: 400;
+}
+
+.mg-tb {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.shimmer-card {
+    background-color: $shimmer;
+    display: block;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 25px;
+    background: #f6f7f8;
+    background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+    background-repeat: no-repeat;
+    background-size: 800px 200px;
+    display: inline-block;
+    position: relative;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: placeholderShimmer;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes placeholderShimmer {
+    0% {
+        background-position: -468px 0;
+    }
+
+    100% {
+        background-position: 468px 0;
+    }
 }
