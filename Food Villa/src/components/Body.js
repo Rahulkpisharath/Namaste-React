@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { restaurantList } from "../../constants";
+import { restaurantList, RESTAURANTS_LIST_API } from "../../constants";
 import RestaurantCard from "../components/RestaurantCard";
 import Shimmer from '../components/Shimmer';
 
@@ -22,13 +22,13 @@ const Body = () => {
 
 
     async function getRestaurants() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=8.573073&lng=76.875569&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch(RESTAURANTS_LIST_API);
         const json = await data.json();
         setAllrestaurants(json?.data?.cards[2]?.data?.data?.cards);
         setFilterdRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     }
     return allrestaurants.length == 0 ? (<Shimmer />) : (
-        <div className="container">
+        <div className="container mg-top-25">
             <div className="search_wrapper pos-relative mg-tb">
                 <input
                     type="text"

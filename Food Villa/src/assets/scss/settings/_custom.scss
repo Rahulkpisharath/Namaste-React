@@ -1,4 +1,5 @@
 @import "https://www.foodchow.com/css/home/font-awesome.min.css";
+@import './keyframeAnimations';
 
 * {
     margin: 0px;
@@ -109,6 +110,29 @@ a:hover {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 500;
+    position: relative;
+
+    &:after {
+        content: "";
+        height: 4px;
+        width: 100%;
+        opacity: 0;
+        background: $Tags;
+        transition: all .18s;
+        position: absolute;
+        bottom: -82%;
+        left: 0;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+    }
+
+    &:hover {
+        color: $Tags;
+
+        &::after {
+            opacity: 1;
+        }
+    }
 }
 
 .container {
@@ -173,7 +197,9 @@ a:hover {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
+.mg-top-25{
+    margin-top:25px;
+}
 .shimmer-card {
     background-color: $shimmer;
     display: block;
@@ -193,12 +219,9 @@ a:hover {
     -webkit-animation-timing-function: linear;
 }
 
-@-webkit-keyframes placeholderShimmer {
-    0% {
-        background-position: -468px 0;
-    }
-
-    100% {
-        background-position: 468px 0;
-    }
+.flex-center-aligned {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

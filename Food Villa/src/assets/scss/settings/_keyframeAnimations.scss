@@ -1,0 +1,11 @@
+/*scss style sheet for keyframe animations*/
+
+@-webkit-keyframes placeholderShimmer {
+    0% {
+        background-position: -468px 0;
+    }
+
+    100% {
+        background-position: 468px 0;
+    }
+}
