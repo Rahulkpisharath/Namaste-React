@@ -1,8 +1,8 @@
-import {IMG_CDN_URL} from '../../constants';
+import { IMG_CDN_URL } from '../../constants';
 
 const RestaurantCard = ({ name, cuisines, cloudinaryImageId, area, avgRating }) => {
     return (
-        <div className='restaurant-card'>
+        <div className='restaurant'>
             <a href='/' className='item-link'>
                 <div>
                     <img className='width-100' src={IMG_CDN_URL + cloudinaryImageId} />
