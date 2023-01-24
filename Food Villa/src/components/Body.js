@@ -30,7 +30,9 @@ const Body = () => {
     }
     return allrestaurants.length == 0 ? (<Shimmer />) : (
         <div className="container mg-top-25">
-            <div className="search_wrapper pos-relative mg-tb">
+            <div className="d-flex justify-content-between align-items-center">
+                <h2 className="flex-50">Restaurants</h2>
+                <div className="search_wrapper pos-relative flex-50">
                 <input
                     type="text"
                     className="search_input"
@@ -49,14 +51,14 @@ const Body = () => {
                         setFilterdRestaurants(data);
                     }}>Search</button>
             </div>
-            <div className="d-flex justify-content-between card-wrapper">
+            </div>
+            
+            <div className="d-flex justify-content-between card-wrapper mg-top-25">
                 {filteredRestaurants.map((restaurant) => {
                     return (
                         <Link className="restaurant-card" to={'/restaurant/'+ restaurant.data.id}>
                             <RestaurantCard {...restaurant.data} key={restaurant.data.id} />            
                         </Link>
-                        
-                        
                     );
                 })}
             </div>

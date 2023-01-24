@@ -19,8 +19,6 @@ const Header = () => {
                             <Link className='nav-link' to='/about'>
                                 <li>About</li>
                             </Link>
-
-
                         </ul>
                     </div>
                     <div className='col-3 logo'>
